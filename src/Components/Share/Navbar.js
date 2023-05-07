@@ -46,7 +46,7 @@ const Navbar = () => {
   );
   return (
     <div>
-      <div class="navbar bg-blue-700 px-12 mx-auto text-white">
+      <div class="navbar px-12 mx-auto text-white shadow-2xl rounded-lg">
         <div class="navbar-start">
           <div class="dropdown">
             <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -72,13 +72,16 @@ const Navbar = () => {
               {menuItem}
             </ul>
           </div>
-          <a class="btn btn-ghost normal-case text-xl">
+          <div className="btn btn-ghost text-secondary font-extrabold text-3xl uppercase">
             {" "}
-            <MdAgriculture className="mr-4" size={55} /> Development Agriculture{" "}
-          </a>
+            <MdAgriculture className="mr-4 text-secondary" size={55} />{" "}
+            Development Agriculture{" "}
+          </div>
         </div>
         <div class="navbar-end hidden lg:flex">
-          <ul class="menu menu-horizontal p-0">{menuItem}</ul>
+          <ul class="menu menu-horizontal p-0 font-bold text-xl hover:bg-se">
+            {menuItem}
+          </ul>
         </div>
       </div>
     </div>
