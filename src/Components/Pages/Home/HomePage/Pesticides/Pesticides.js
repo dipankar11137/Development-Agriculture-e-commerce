@@ -12,13 +12,12 @@ const Pesticides = () => {
           data-aos-delay="900"
           data-aos-duration="3000"
           data-aos-easing="ease-in-out"
-          data-aos-once="true"
           className="h-40"
           src="https://thumbs.dreamstime.com/b/killing-big-mosquito-insecticide-spray-cartoon-illustration-man-149315232.jpg"
           alt=""
         />
       </div>
-      <div className="bg-pink-50 p-2 rounded-xl">
+      <div className="bg-pink-50 py-2 px-4 rounded-xl">
         <h1 className="text-4xl font-bold mb-6 ml-5">Pesticide</h1>
         <Pesticide />
       </div>

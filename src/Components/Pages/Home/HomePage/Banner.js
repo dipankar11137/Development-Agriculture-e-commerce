@@ -25,7 +25,6 @@ const Banner = () => {
                 data-aos-delay="60"
                 data-aos-duration="1200"
                 data-aos-easing="ease-in-out"
-                data-aos-once="true"
               >
                 <img
                   className="imageStyle rounded-lg skew-y-3 shadow-2xl cursor-pointer pic-style"
@@ -41,7 +40,6 @@ const Banner = () => {
                   data-aos-delay="50"
                   data-aos-duration="1000"
                   data-aos-easing="ease-in-out"
-                  data-aos-once="true"
                 >
                   <h1 class="text-5xl font-bold text-primary">
                     Development{" "}

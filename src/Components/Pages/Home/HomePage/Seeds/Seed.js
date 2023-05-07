@@ -10,7 +10,6 @@ const Seed = () => {
         data-aos-delay="60"
         data-aos-duration="1200"
         data-aos-easing="ease-in-out"
-        data-aos-once="true"
         className="card w-96  shadow-xl hover:shadow-2xl bg-pink-50 "
       >
         <figure>
@@ -43,7 +42,6 @@ const Seed = () => {
         data-aos-delay="60"
         data-aos-duration="1200"
         data-aos-easing="ease-in-out"
-        data-aos-once="true"
         className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl"
       >
         <figure>
@@ -75,7 +73,6 @@ const Seed = () => {
         data-aos-delay="60"
         data-aos-duration="1200"
         data-aos-easing="ease-in-out"
-        data-aos-once="true"
         className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl"
       >
         <figure>
@@ -107,7 +104,6 @@ const Seed = () => {
         data-aos-delay="60"
         data-aos-duration="1200"
         data-aos-easing="ease-in-out"
-        data-aos-once="true"
         className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl"
       >
         <figure>
@@ -139,7 +135,6 @@ const Seed = () => {
         data-aos-delay="60"
         data-aos-duration="1200"
         data-aos-easing="ease-in-out"
-        data-aos-once="true"
         className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl"
       >
         <figure>
@@ -171,7 +166,6 @@ const Seed = () => {
         data-aos-delay="60"
         data-aos-duration="1200"
         data-aos-easing="ease-in-out"
-        data-aos-once="true"
         className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl"
       >
         <figure>
@@ -203,7 +197,6 @@ const Seed = () => {
         data-aos-delay="60"
         data-aos-duration="1200"
         data-aos-easing="ease-in-out"
-        data-aos-once="true"
         className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl"
       >
         <figure>

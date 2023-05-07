@@ -9,7 +9,6 @@ const Fertilizer = () => {
         data-aos-delay="60"
         data-aos-duration="1200"
         data-aos-easing="ease-in-out"
-        data-aos-once="true"
         className="card card-side bg-base-100 shadow-xl hover:shadow-2xl hover:bg-pink-100"
       >
         <figure>
@@ -33,7 +32,6 @@ const Fertilizer = () => {
         data-aos-delay="60"
         data-aos-duration="1200"
         data-aos-easing="ease-in-out"
-        data-aos-once="true"
         className="card card-side bg-base-100 shadow-xl hover:shadow-2xl hover:bg-pink-100"
       >
         <figure>
@@ -57,7 +55,6 @@ const Fertilizer = () => {
         data-aos-delay="60"
         data-aos-duration="1200"
         data-aos-easing="ease-in-out"
-        data-aos-once="true"
         className="card card-side bg-base-100 shadow-xl hover:shadow-2xl hover:bg-pink-100"
       >
         <figure>
@@ -81,7 +78,6 @@ const Fertilizer = () => {
         data-aos-delay="60"
         data-aos-duration="1200"
         data-aos-easing="ease-in-out"
-        data-aos-once="true"
         className="card card-side bg-base-100 shadow-xl hover:shadow-2xl hover:bg-pink-100"
       >
         <figure>
