@@ -4,6 +4,7 @@ import Seeds from "./HomePage/Seeds/Seeds";
 import Fertilizers from "./HomePage/Fertilizers/Fertilizers";
 import Pesticides from "./HomePage/Pesticides/Pesticides";
 import Contact from "./HomePage/Contact/Contact";
+import FarmingEquipments from "./HomePage/FarmingEquipment/FarmingEquipments";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Seeds />
       <Fertilizers />
       <Pesticides />
+      <FarmingEquipments />
       <Contact />
     </div>
   );
