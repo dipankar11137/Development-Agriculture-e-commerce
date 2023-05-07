@@ -13,7 +13,20 @@ const Fertilizers = () => {
         }}
       > */}
       {/* </div> */}
-      <h1 className="py-10 text-4xl font-extrabold">Fertilizer </h1>
+      <div className="flex mb-10 justify-center">
+        <img
+          data-aos="zoom-in"
+          data-aos-offset="200"
+          data-aos-delay="60"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+          data-aos-once="true"
+          className="h-32 pr-8 rounded-3xl"
+          src="https://images.squarespace-cdn.com/content/v1/5acf967b7e3c3a98a6a61c0e/1584017935368-JVQVNIPDWLI9WVVV61FV/fertilizer_bag_in_grass.gif"
+          alt=""
+        />
+        <h1 className="py-10 text-4xl font-extrabold">Fertilizer </h1>
+      </div>
 
       <Fertilizer />
     </div>
