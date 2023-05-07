@@ -4,7 +4,7 @@ import "../../../../CSS/ImageStyle.css";
 const Seed = () => {
   return (
     <div className="grid grid-cols-4 gap-5">
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card w-96  shadow-xl hover:shadow-2xl bg-pink-50 ">
         <figure>
           <img
             className="w-full h-62 origin-bottom -rotate-12 pic-style cursor-pointer"
@@ -12,7 +12,7 @@ const Seed = () => {
             alt=""
           />
         </figure>
-        <div className="card-body">
+        <div className="card-body hover:bg-rose-100">
           <h2 className="card-title">Seeds!</h2>
           <p>
             Price : <span className="font-bold">$ 5</span>
@@ -28,7 +28,7 @@ const Seed = () => {
           </div>
         </div>
       </div>
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl">
         <figure>
           <img
             className="w-full h-62 skew-y-12 pic-style cursor-pointer"
@@ -52,7 +52,7 @@ const Seed = () => {
           </div>
         </div>
       </div>
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl">
         <figure>
           <img
             className="w-full h-64 origin-bottom -rotate-12 pic-style cursor-pointer"
@@ -76,7 +76,7 @@ const Seed = () => {
           </div>
         </div>
       </div>
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl">
         <figure>
           <img
             className="w-full h-62 skew-y-12 pic-style cursor-pointer"
@@ -100,7 +100,7 @@ const Seed = () => {
           </div>
         </div>
       </div>
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl">
         <figure>
           <img
             className="w-full h-62 origin-bottom -rotate-12 pic-style cursor-pointer"
@@ -124,7 +124,7 @@ const Seed = () => {
           </div>
         </div>
       </div>
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl">
         <figure>
           <img
             className="w-full h-62 skew-y-12 pic-style cursor-pointer"
@@ -148,7 +148,7 @@ const Seed = () => {
           </div>
         </div>
       </div>
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl">
         <figure>
           <img
             className="w-full h-62 origin-bottom -rotate-12 pic-style  cursor-pointer"
