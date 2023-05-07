@@ -4,7 +4,15 @@ import "../../../../CSS/ImageStyle.css";
 const Seed = () => {
   return (
     <div className="grid grid-cols-4 gap-5">
-      <div className="card w-96  shadow-xl hover:shadow-2xl bg-pink-50 ">
+      <div
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="60"
+        data-aos-duration="1200"
+        data-aos-easing="ease-in-out"
+        data-aos-once="true"
+        className="card w-96  shadow-xl hover:shadow-2xl bg-pink-50 "
+      >
         <figure>
           <img
             className="w-full h-62 origin-bottom -rotate-12 pic-style cursor-pointer"
@@ -28,7 +36,16 @@ const Seed = () => {
           </div>
         </div>
       </div>
-      <div className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl">
+
+      <div
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="60"
+        data-aos-duration="1200"
+        data-aos-easing="ease-in-out"
+        data-aos-once="true"
+        className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl"
+      >
         <figure>
           <img
             className="w-full h-62 skew-y-12 pic-style cursor-pointer"
@@ -52,7 +69,15 @@ const Seed = () => {
           </div>
         </div>
       </div>
-      <div className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl">
+      <div
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="60"
+        data-aos-duration="1200"
+        data-aos-easing="ease-in-out"
+        data-aos-once="true"
+        className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl"
+      >
         <figure>
           <img
             className="w-full h-64 origin-bottom -rotate-12 pic-style cursor-pointer"
@@ -76,7 +101,15 @@ const Seed = () => {
           </div>
         </div>
       </div>
-      <div className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl">
+      <div
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="60"
+        data-aos-duration="1200"
+        data-aos-easing="ease-in-out"
+        data-aos-once="true"
+        className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl"
+      >
         <figure>
           <img
             className="w-full h-62 skew-y-12 pic-style cursor-pointer"
@@ -100,7 +133,15 @@ const Seed = () => {
           </div>
         </div>
       </div>
-      <div className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl">
+      <div
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="60"
+        data-aos-duration="1200"
+        data-aos-easing="ease-in-out"
+        data-aos-once="true"
+        className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl"
+      >
         <figure>
           <img
             className="w-full h-62 origin-bottom -rotate-12 pic-style cursor-pointer"
@@ -124,7 +165,15 @@ const Seed = () => {
           </div>
         </div>
       </div>
-      <div className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl">
+      <div
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="60"
+        data-aos-duration="1200"
+        data-aos-easing="ease-in-out"
+        data-aos-once="true"
+        className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl"
+      >
         <figure>
           <img
             className="w-full h-62 skew-y-12 pic-style cursor-pointer"
@@ -148,7 +197,15 @@ const Seed = () => {
           </div>
         </div>
       </div>
-      <div className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl">
+      <div
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="60"
+        data-aos-duration="1200"
+        data-aos-easing="ease-in-out"
+        data-aos-once="true"
+        className="card w-96 bg-pink-50 shadow-xl hover:shadow-2xl"
+      >
         <figure>
           <img
             className="w-full h-62 origin-bottom -rotate-12 pic-style  cursor-pointer"
