@@ -4,7 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { signOut } from "firebase/auth";
 import { FaHome } from "react-icons/fa";
-import { GiFruiting } from "react-icons/gi";
+import { MdAgriculture } from "react-icons/md";
 
 const Navbar = () => {
   const [user, loading, error] = useAuthState(auth);
@@ -74,7 +74,7 @@ const Navbar = () => {
           </div>
           <a class="btn btn-ghost normal-case text-xl">
             {" "}
-            <GiFruiting size={30} /> Graca-Grocery{" "}
+            <MdAgriculture className="mr-4" size={55} /> Development Agriculture{" "}
           </a>
         </div>
         <div class="navbar-end hidden lg:flex">

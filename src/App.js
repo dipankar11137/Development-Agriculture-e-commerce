@@ -8,6 +8,11 @@ import Navbar from "./Components/Share/Navbar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import NotFound from "./Components/Share/NotFound";
+// animation
+import "animate.css/animate.min.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 function App() {
   return (
