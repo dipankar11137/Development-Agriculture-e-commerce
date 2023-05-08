@@ -13,7 +13,7 @@ const Navbar = () => {
     signOut(auth);
   };
 
-  const [selectedButton, setSelectedButton] = useState("Button 1");
+  const [selectedButton, setSelectedButton] = useState("");
 
   const menuItem = (
     <>
@@ -37,7 +37,7 @@ const Navbar = () => {
             : ""
         }
       >
-        <Link to="/" className="font-bold  text-xl ">
+        <Link to="/blog" className="font-bold  text-xl ">
           Blog
         </Link>
       </li>
@@ -52,7 +52,7 @@ const Navbar = () => {
                 : ""
             }
           >
-            <Link to="/" className="font-bold  text-xl ">
+            <Link to="/addItem" className="font-bold  text-xl ">
               All Items
             </Link>
           </li>
@@ -93,7 +93,14 @@ const Navbar = () => {
     </>
   );
   return (
-    <div>
+    <div
+      className="px-20"
+      style={{
+        background: `url("https://cdn.wallpapersafari.com/61/31/Mo8nwL.jpg")`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div class="navbar px-12 mx-auto text-white shadow-2xl rounded-lg">
         <div class="navbar-start">
           <div class="dropdown">

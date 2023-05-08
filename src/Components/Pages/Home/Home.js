@@ -6,6 +6,7 @@ import Pesticides from "./HomePage/Pesticides/Pesticides";
 import Contact from "./HomePage/Contact/Contact";
 import FarmingEquipments from "./HomePage/FarmingEquipment/FarmingEquipments";
 import Advertisement from "./HomePage/Advertisement/Advertisement";
+import Footer from "../../Share/Footer";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Pesticides />
       <FarmingEquipments />
       <Contact />
+      <Footer />
     </div>
   );
 };

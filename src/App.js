@@ -12,20 +12,24 @@ import NotFound from "./Components/Share/NotFound";
 import "animate.css/animate.min.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import AddItems from "./Components/Pages/AddItem/AddItems";
+import Blog from "./Components/Pages/Blog/Blog";
 AOS.init();
 
 function App() {
   return (
     <div>
       {/* <CreateAccount /> */}
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/addItem" element={<AddItems />}></Route>
+        <Route path="/blog" element={<Blog />}></Route>
         <Route path="/createAccount" element={<CreateAccount />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/*" element={<NotFound />}></Route>
       </Routes>
-      <Footer />
+
       <ToastContainer />
     </div>
   );
