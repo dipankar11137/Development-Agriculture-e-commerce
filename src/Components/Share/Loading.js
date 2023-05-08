@@ -5,7 +5,7 @@ const Loading = () => {
   return (
     <div className="h-screen flex justify-center items-center">
       {/* <button className="btn btn-square loading  "></button> */}
-      <PacmanLoader color="#36d7b7" />
+      <PacmanLoader color="#E00813" />
     </div>
   );
 };

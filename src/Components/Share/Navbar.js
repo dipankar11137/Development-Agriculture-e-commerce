@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { signOut } from "firebase/auth";
-import { FaHome } from "react-icons/fa";
 import { MdAgriculture } from "react-icons/md";
 import "../CSS/Navbar.css";
 
 const Navbar = () => {
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
   const logout = () => {
     signOut(auth);
   };
@@ -64,8 +63,8 @@ const Navbar = () => {
                 : ""
             }
           >
-            <Link to="/" className="font-bold  text-xl ">
-              Add Item
+            <Link to="/manageItem" className="font-bold  text-xl ">
+              Manage Item
             </Link>
           </li>
           <li
