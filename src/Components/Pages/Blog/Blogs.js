@@ -1,7 +1,7 @@
 import React from "react";
 import history from "../../../Images/Blog/Swatantra-1.jpg";
 import team2 from "../../../Images/image/c82824_b2614282207e48f2a9db9ef08d11ff5d~mv2.webp";
-import team from "../../../Images/image/c82824_b2614282207e48f2a9db9ef08d11ff5d~mv2.webp";
+import team1 from "../../../Images/Blog/Vladimir-Putin-PNG-Photos.png";
 import team3 from "../../../Images/image/c82824_b2614282207e48f2a9db9ef08d11ff5d~mv2.webp";
 import team4 from "../../../Images/image/c82824_b2614282207e48f2a9db9ef08d11ff5d~mv2.webp";
 import blog1 from "../../../Images/Blog/toscano-removebg-preview.png";
@@ -207,11 +207,7 @@ const Blogs = () => {
         <AnimationOnScroll animateIn="animate__bounceIn" duration={5}>
           <div class="card lg:h-[350px] w-50 bg-base-100 shadow-xl">
             <figure class="px-10 pt-10 ">
-              <img
-                className="rounded-lg pic-style"
-                src="https://www.pngall.com/wp-content/uploads/12/Vladimir-Putin-PNG-Photos.png"
-                alt="Shoes"
-              />
+              <img className="rounded-lg pic-style" src={team1} alt="Shoes" />
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title text-primary">Tiffany Tofu</h2>
