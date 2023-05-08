@@ -209,7 +209,7 @@ const Blogs = () => {
             <figure class="px-10 pt-10 ">
               <img
                 className="rounded-lg pic-style"
-                src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/streams/2012/September/120905/523074-120905-vladimir-putin.jpg"
+                src="https://www.pngall.com/wp-content/uploads/12/Vladimir-Putin-PNG-Photos.png"
                 alt="Shoes"
               />
             </figure>
