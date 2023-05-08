@@ -12,7 +12,7 @@ const Navbar = () => {
     signOut(auth);
   };
 
-  const [selectedButton, setSelectedButton] = useState("");
+  const [selectedButton, setSelectedButton] = useState("Button 1");
 
   const menuItem = (
     <>
@@ -126,11 +126,16 @@ const Navbar = () => {
               {menuItem}
             </ul>
           </div>
-          <div className="btn btn-ghost text-secondary font-extrabold text-3xl uppercase">
-            {" "}
-            <MdAgriculture className="mr-4 text-secondary" size={55} />{" "}
-            Development Agriculture{" "}
-          </div>
+          <Link to={"/"}>
+            <div
+              onClick={() => setSelectedButton("Button 1")}
+              className="btn btn-ghost text-secondary font-extrabold text-3xl uppercase"
+            >
+              {" "}
+              <MdAgriculture className="mr-4 text-secondary" size={55} />{" "}
+              Development Agriculture{" "}
+            </div>
+          </Link>
         </div>
         <div class="navbar-end hidden lg:flex">
           <ul class="menu menu-horizontal p-0 font-bold text-xl hover:bg-se">
