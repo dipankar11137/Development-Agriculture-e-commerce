@@ -75,7 +75,7 @@ const Navbar = () => {
                 : ""
             }
           >
-            <Link to="/" className="font-bold  text-xl ">
+            <Link to="/myItem" className="font-bold  text-xl ">
               My Item
             </Link>
           </li>
