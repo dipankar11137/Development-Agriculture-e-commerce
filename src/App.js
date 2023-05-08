@@ -16,6 +16,7 @@ import AddItems from "./Components/Pages/AddItem/AddItems";
 import Blog from "./Components/Pages/Blog/Blog";
 import ManageItems from "./Components/Pages/ManageItem/ManageItems";
 import MyItems from "./Components/Pages/MyItem/MyItems";
+import BuyNow from "./Components/Pages/BuyNow/BuyNow";
 AOS.init();
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/addItem" element={<AddItems />}></Route>
         <Route path="/manageItem" element={<ManageItems />}></Route>
         <Route path="/myItem" element={<MyItems />}></Route>
+        <Route path="/buyNow/:id" element={<BuyNow />}></Route>
         <Route path="/createAccount" element={<CreateAccount />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/*" element={<NotFound />}></Route>
