@@ -47,8 +47,8 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <p>Copyright © 2022 </p>
-        <p>Develop By Dipankar Halder</p>
+        <p>Copyright © 2023 </p>
+        <p>Develop By Shahriar Shakib</p>
       </div>
     </footer>
   );

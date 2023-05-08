@@ -13,7 +13,7 @@ const Home = () => {
       <Banner />
       <Seeds />
       <Advertisement />
-      {/* <Fertilizers /> */}
+      <Fertilizers />
       <Pesticides />
       <FarmingEquipments />
       <Contact />

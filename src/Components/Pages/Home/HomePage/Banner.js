@@ -27,7 +27,7 @@ const Banner = () => {
                 data-aos-easing="ease-in-out"
               >
                 <img
-                  className="imageStyle rounded-lg skew-y-3 shadow-2xl cursor-pointer pic-style"
+                  className="imageStyle rounded-lg skew-y-3 shadow-2xl cursor-pointer pic-style hover:rounded-3xl"
                   src="https://static.wixstatic.com/media/c82824_b2614282207e48f2a9db9ef08d11ff5d~mv2.jpg/v1/fill/w_1744,h_1354,al_c,q_90,enc_auto/c82824_b2614282207e48f2a9db9ef08d11ff5d~mv2.jpg"
                   alt=""
                 />

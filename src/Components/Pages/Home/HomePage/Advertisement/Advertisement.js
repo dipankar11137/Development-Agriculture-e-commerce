@@ -1,6 +1,6 @@
 import React from "react";
 import add from "../../../../../Images/image/add.jpg";
-import upto from "../../../../../Images/image/up to.png";
+import upto from "../../../../../Images/image/senty.png";
 
 const Advertisement = () => {
   return (
