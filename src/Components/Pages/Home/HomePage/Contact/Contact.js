@@ -1,5 +1,6 @@
 import React from "react";
 import { FaPhoneAlt } from "react-icons/fa";
+import call from "../../../../../Images/image/call-center.png";
 
 const Contact = () => {
   return (
@@ -26,7 +27,7 @@ const Contact = () => {
             data-aos-duration="1500"
             style={{ marginTop: "-120px" }}
             className="h-96"
-            src="https://cdn-marketplacexyz.s3.ap-south-1.amazonaws.com/sheba_xyz/images/jpg/service-request.png"
+            src={call}
             alt=""
           />
         </div>
