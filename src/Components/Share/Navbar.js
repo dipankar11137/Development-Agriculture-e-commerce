@@ -53,7 +53,7 @@ const Navbar = () => {
             }
           >
             <Link to="/addItem" className="font-bold  text-xl ">
-              All Items
+              Add Items
             </Link>
           </li>
           <li
