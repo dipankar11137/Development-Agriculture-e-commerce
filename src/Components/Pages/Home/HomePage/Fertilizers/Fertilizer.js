@@ -5,7 +5,7 @@ const Fertilizer = () => {
     <div className="grid grid-cols-2 gap-8">
       <div
         data-aos="fade-right"
-        data-aos-offset="200"
+        data-aos-offset="100"
         data-aos-delay="60"
         data-aos-duration="1200"
         data-aos-easing="ease-in-out"
@@ -28,7 +28,7 @@ const Fertilizer = () => {
       </div>
       <div
         data-aos="fade-left"
-        data-aos-offset="200"
+        data-aos-offset="100"
         data-aos-delay="60"
         data-aos-duration="1200"
         data-aos-easing="ease-in-out"
@@ -51,7 +51,7 @@ const Fertilizer = () => {
       </div>
       <div
         data-aos="fade-right"
-        data-aos-offset="200"
+        data-aos-offset="100"
         data-aos-delay="60"
         data-aos-duration="1200"
         data-aos-easing="ease-in-out"
@@ -74,7 +74,7 @@ const Fertilizer = () => {
       </div>
       <div
         data-aos="fade-left"
-        data-aos-offset="200"
+        data-aos-offset="100"
         data-aos-delay="60"
         data-aos-duration="1200"
         data-aos-easing="ease-in-out"

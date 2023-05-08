@@ -5,13 +5,15 @@ import Fertilizers from "./HomePage/Fertilizers/Fertilizers";
 import Pesticides from "./HomePage/Pesticides/Pesticides";
 import Contact from "./HomePage/Contact/Contact";
 import FarmingEquipments from "./HomePage/FarmingEquipment/FarmingEquipments";
+import Advertisement from "./HomePage/Advertisement/Advertisement";
 
 const Home = () => {
   return (
     <div>
       <Banner />
       <Seeds />
-      <Fertilizers />
+      <Advertisement />
+      {/* <Fertilizers /> */}
       <Pesticides />
       <FarmingEquipments />
       <Contact />
