@@ -1,7 +1,14 @@
-import React from "react";
-import Fertilizer from "./Fertilizer";
+import React, { useEffect, useState } from 'react';
+import Fertilizer from './Fertilizer';
 
 const Fertilizers = () => {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    const url = `http://localhost:5000/product/Fertilizer`;
+    fetch(url)
+      .then(res => res.json())
+      .then(data => setProducts(data));
+  }, [products]);
   return (
     <div className="mt-20 mx-20 bg-lime-50 p-2 rounded-lg">
       {/* <div
@@ -28,7 +35,15 @@ const Fertilizers = () => {
         <h1 className="py-10 text-4xl font-extrabold">Fertilizer </h1>
       </div>
 
-      <Fertilizer />
+      <div className="grid grid-cols-2 gap-8">
+        {products.map((product, index) => (
+          <Fertilizer
+            key={product._id}
+            product={product}
+            index={index}
+          ></Fertilizer>
+        ))}
+      </div>
     </div>
   );
 };

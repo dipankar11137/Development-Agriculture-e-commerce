@@ -8,7 +8,7 @@ const Seeds = () => {
     fetch(url)
       .then(res => res.json())
       .then(data => setProducts(data));
-  }, []);
+  }, [products]);
   return (
     <div className="mx-20 bg-slate-50 p-2 mt-12 rounded-lg">
       <h1 className="text-center pt-4 mb-16 text-4xl font-extrabold uppercase">
