@@ -1,8 +1,15 @@
-import React from "react";
-import FarmingEquipment from "./FarmingEquipment";
-import equ from "../../../../../Images/image/equ.png";
+import React, { useEffect, useState } from 'react';
+import equ from '../../../../../Images/image/equ.png';
+import FarmingEquipment from './FarmingEquipment';
 
 const FarmingEquipments = () => {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    const url = `http://localhost:5000/product/Farming Equipment`;
+    fetch(url)
+      .then(res => res.json())
+      .then(data => setProducts(data));
+  }, [products]);
   return (
     <div className="mx-20 mt-16">
       <div className="flex justify-center">
@@ -17,8 +24,16 @@ const FarmingEquipments = () => {
           alt=""
         />
       </div>
-      <h1 className="text-3xl text-center">Farming Equipment</h1>
-      <FarmingEquipment />
+      <h1 className="text-3xl text-center font-bold mb-5">Farming Equipment</h1>
+      <div className="grid grid-cols-3 gap-8">
+        {products.map((product, index) => (
+          <FarmingEquipment
+            key={product._id}
+            product={product}
+            index={index}
+          ></FarmingEquipment>
+        ))}
+      </div>
     </div>
   );
 };
