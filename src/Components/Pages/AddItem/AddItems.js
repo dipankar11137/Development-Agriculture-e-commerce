@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddItems = () => {
-  const [productsCategory, setProductsCategory] = useState("");
+  const [productsCategory, setProductsCategory] = useState('');
 
   const {
     register,
@@ -10,22 +12,22 @@ const AddItems = () => {
     handleSubmit,
     reset,
   } = useForm();
-  const onSubmit = (data) => {
+  const onSubmit = data => {
     const changeUrl = { ...data, productsCategory };
     // console.log(changeUrl);
-    // const url = `http://localhost:5000/books`;
-    // fetch(url, {
-    //   method: "POST",
-    //   headers: {
-    //     "content-type": "application/json",
-    //   },
-    //   body: JSON.stringify(changeUrl),
-    // })
-    //   .then((res) => res.json())
-    //   .then((result) => {
-    //     toast.success("Successfully Add This Products");
-    //     reset();
-    //   });
+    const url = `http://localhost:5000/products`;
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(changeUrl),
+    })
+      .then(res => res.json())
+      .then(result => {
+        toast.success(' Add  ');
+        reset();
+      });
   };
   return (
     <div
@@ -39,10 +41,10 @@ const AddItems = () => {
       <div
         style={{
           backgroundImage: `url("https://cdn.wallpapersafari.com/61/31/Mo8nwL.jpg")`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          width: "100%",
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          width: '100%',
         }}
         className="h-screen"
       >
@@ -52,7 +54,7 @@ const AddItems = () => {
         <div className="flex justify-center  p-5 rounded-2xl w-11/12  ml-5 ">
           <form className="" onSubmit={handleSubmit(onSubmit)}>
             <select
-              onChange={(e) => setProductsCategory(e.target.value)}
+              onChange={e => setProductsCategory(e.target.value)}
               className="select select-primary w-96 "
             >
               <option className="text-lg font-bold" disabled selected>
@@ -80,17 +82,17 @@ const AddItems = () => {
             </label>
             <input
               type="text"
-              placeholder="Book Name"
+              placeholder="Product Name"
               className="input input-bordered bg-white lg:w-96 sm:w-full   hover:shadow-xl shadow-inner"
-              {...register("name", {
+              {...register('name', {
                 required: {
                   value: true,
-                  message: "Book Name is Required",
+                  message: 'Product Name is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.name?.type === "required" && (
+              {errors.name?.type === 'required' && (
                 <span className="label-text-alt text-red-500">
                   {errors?.name?.message}
                 </span>
@@ -105,15 +107,15 @@ const AddItems = () => {
               type="text"
               placeholder="Images URL"
               className="input input-bordered bg-white w-full   hover:shadow-xl shadow-inner"
-              {...register("img", {
+              {...register('img', {
                 required: {
                   value: true,
-                  message: "Images is Required",
+                  message: 'Images is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.img?.type === "required" && (
+              {errors.img?.type === 'required' && (
                 <span className="label-text-alt text-red-500">
                   {errors?.img?.message}
                 </span>
@@ -130,15 +132,15 @@ const AddItems = () => {
               type="number"
               placeholder="Price"
               className="input input-bordered bg-white w-full    hover:shadow-xl shadow-inner"
-              {...register("price", {
+              {...register('price', {
                 required: {
                   value: true,
-                  message: "Price is Required",
+                  message: 'Price is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.price?.type === "required" && (
+              {errors.price?.type === 'required' && (
                 <span className="label-text-alt text-red-500">
                   {errors?.price?.message}
                 </span>
@@ -155,15 +157,15 @@ const AddItems = () => {
               type="text"
               placeholder="Description"
               className="input input-bordered bg-white w-full   h-20 pt-1 hover:shadow-xl shadow-inner"
-              {...register("description", {
+              {...register('description', {
                 required: {
                   value: true,
-                  message: "Description is Required",
+                  message: 'Description is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.description?.type === "required" && (
+              {errors.description?.type === 'required' && (
                 <span className="label-text-alt text-red-500">
                   {errors?.description?.message}
                 </span>
