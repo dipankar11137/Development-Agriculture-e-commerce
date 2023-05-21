@@ -1,8 +1,14 @@
 import React from "react";
-import "../../../../CSS/ImageStyle.css";
+import { useNavigate } from 'react-router-dom';
+import '../../../../CSS/ImageStyle.css';
 
 const Seed = ({ product, index }) => {
+  const navigation = useNavigate();
   const { name, img, price, description } = product;
+
+  const handleBuy = id => {
+    navigation(`/buyNow/${id}`);
+  };
   return (
     <div
       data-aos="fade-up"
@@ -34,7 +40,10 @@ const Seed = ({ product, index }) => {
         </p>
         <p>{description}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary hover:animate-pulse">
+          <button
+            onClick={() => handleBuy(product._id)}
+            className="btn btn-primary hover:animate-pulse"
+          >
             Buy Now
           </button>
         </div>

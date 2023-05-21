@@ -1,17 +1,28 @@
-import React from "react";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
+import React, { useEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { useParams } from 'react-router-dom';
 
 const BuyNow = () => {
-  const [quantity, setQuantity] = useState("");
+  const { id } = useParams();
+  const [product, setProduct] = useState({});
+  const [quantity, setQuantity] = useState('');
+
   const totalPrice = quantity * 30;
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/product/${id}`)
+      .then(res => res.json())
+      .then(data => setProduct(data));
+  }, [id]);
+
+  console.log(product);
   const {
     register,
     formState: { errors },
     handleSubmit,
     reset,
   } = useForm();
-  const onSubmit = (data) => {
+  const onSubmit = data => {
     const changeUrl = { ...data, quantity, totalPrice };
     console.log(changeUrl);
     // const url = `http://localhost:5000/books`;
@@ -40,10 +51,10 @@ const BuyNow = () => {
       <div
         style={{
           backgroundImage: `url("https://cdn.wallpapersafari.com/61/31/Mo8nwL.jpg")`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          width: "100%",
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          width: '100%',
         }}
         className="h-screen"
       >
@@ -74,7 +85,7 @@ const BuyNow = () => {
               </span>
             </label>
             <input
-              onChange={(e) => setQuantity(e.target.value)}
+              onChange={e => setQuantity(e.target.value)}
               type="number"
               placeholder="Quantity"
               className="input input-bordered bg-white w-full    hover:shadow-xl shadow-inner"
@@ -87,15 +98,15 @@ const BuyNow = () => {
               type="date"
               placeholder="Images URL"
               className="input input-bordered bg-white w-full   hover:shadow-xl shadow-inner"
-              {...register("date", {
+              {...register('date', {
                 required: {
                   value: true,
-                  message: "Date is Required",
+                  message: 'Date is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.date?.type === "required" && (
+              {errors.date?.type === 'required' && (
                 <span className="label-text-alt text-red-50">
                   {errors?.date?.message}
                 </span>
@@ -109,15 +120,15 @@ const BuyNow = () => {
               type="phone"
               placeholder="Phone Number"
               className="input input-bordered bg-white w-full   hover:shadow-xl shadow-inner"
-              {...register("phone", {
+              {...register('phone', {
                 required: {
                   value: true,
-                  message: "Phone is Required",
+                  message: 'Phone is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.phone?.type === "required" && (
+              {errors.phone?.type === 'required' && (
                 <span className="label-text-alt text-red-50">
                   {errors?.phone?.message}
                 </span>
@@ -134,15 +145,15 @@ const BuyNow = () => {
               type="text"
               placeholder="Address"
               className="input input-bordered bg-white w-full   h-20 pt-1 hover:shadow-xl shadow-inner"
-              {...register("address", {
+              {...register('address', {
                 required: {
                   value: true,
-                  message: "Address is Required",
+                  message: 'Address is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.address?.type === "required" && (
+              {errors.address?.type === 'required' && (
                 <span className="label-text-alt text-red-50">
                   {errors?.address?.message}
                 </span>
