@@ -1,8 +1,14 @@
 import React from "react";
-import "../../../../CSS/CardSTyle.css";
+import { useNavigate } from 'react-router-dom';
+import '../../../../CSS/CardSTyle.css';
 
 const Pesticide = ({ product }) => {
-  const { name, img, price, description } = product;
+  const { name, img, price } = product;
+  const navigation = useNavigate();
+
+  const handleBuy = id => {
+    navigation(`/buyNow/${id}`);
+  };
   return (
     <div
       data-aos="flip-left"
@@ -20,7 +26,10 @@ const Pesticide = ({ product }) => {
           price : ${price}
         </button>
 
-        <button className="w-2/4  bg-primary  text-white p-3 rounded-lg  uppercase font-bold mt-4">
+        <button
+          onClick={() => handleBuy(product._id)}
+          className="w-2/4  bg-primary  text-white p-3 rounded-lg  uppercase font-bold mt-4"
+        >
           Buy Now
         </button>
       </div>
