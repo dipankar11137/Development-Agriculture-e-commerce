@@ -1,6 +1,6 @@
 import React from "react";
 
-const ManageItem = ({ product, index }) => {
+const ManageItem = ({ product, index, handleDelete }) => {
   const { name, img, price, productsCategory } = product;
   return (
     <tr>
@@ -17,7 +17,12 @@ const ManageItem = ({ product, index }) => {
       <td>{price}</td>
       <td className=" w-44 ">
         <div className="mr-[100px]">
-          <button className="btn btn-sm btn-primary">Remove</button>
+          <button
+            onClick={() => handleDelete(product._id)}
+            className="btn btn-sm btn-primary"
+          >
+            Remove
+          </button>
         </div>
       </td>
     </tr>
