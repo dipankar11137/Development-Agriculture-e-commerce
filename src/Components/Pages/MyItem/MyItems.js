@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
+import auth from '../../../firebase.init';
 import MyItem from './MyItem';
 
 const MyItems = () => {
+  const [user] = useAuthState(auth);
+  const email = user?.email;
+  // console.log(email);
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    const url = `http://localhost:5000/bookProducts`;
+    const url = `http://localhost:5000/buyProducts/${email}`;
     fetch(url)
       .then(res => res.json())
       .then(data => setProducts(data));
