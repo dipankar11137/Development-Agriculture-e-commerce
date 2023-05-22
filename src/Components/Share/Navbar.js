@@ -24,7 +24,7 @@ const Navbar = () => {
             : ''
         }
       >
-        <Link to="/" className="font-bold   ">
+        <Link to="/" className="font-bold   text-xl">
           Home
         </Link>
       </li>
@@ -36,7 +36,7 @@ const Navbar = () => {
             : ''
         }
       >
-        <Link to="/blog" className="font-bold  ">
+        <Link to="/blog" className="font-bold text-xl ">
           Blog
         </Link>
       </li>
@@ -51,7 +51,7 @@ const Navbar = () => {
                 : ''
             }
           >
-            <Link to="/addItem" className="font-bold   ">
+            <Link to="/addItem" className="font-bold  text-xl ">
               Add Items
             </Link>
           </li>
@@ -63,7 +63,7 @@ const Navbar = () => {
                 : ''
             }
           >
-            <Link to="/manageItem" className="font-bold   ">
+            <Link to="/manageItem" className="font-bold  text-xl ">
               Manage Item
             </Link>
           </li>
@@ -75,7 +75,7 @@ const Navbar = () => {
                 : ''
             }
           >
-            <Link to="/manageBook" className="font-bold   ">
+            <Link to="/manageBook" className="font-bold   text-xl">
               Manage all Book
             </Link>
           </li>
@@ -83,18 +83,24 @@ const Navbar = () => {
       )}
 
       {user ? (
-        <li
-          onClick={() => setSelectedButton('Button 5')}
-          className={
-            selectedButton === 'Button 5'
-              ? 'bg-primary text-white rounded-lg'
-              : ''
-          }
-        >
-          <Link to="/myItem" className="font-bold  ">
-            My Item
-          </Link>
-        </li>
+        <>
+          {user?.email === 'abc@def.com' ? (
+            <></>
+          ) : (
+            <li
+              onClick={() => setSelectedButton('Button 5')}
+              className={
+                selectedButton === 'Button 5'
+                  ? 'bg-primary text-white rounded-lg'
+                  : ''
+              }
+            >
+              <Link to="/myItem" className="font-bold  text-xl">
+                My Item
+              </Link>
+            </li>
+          )}
+        </>
       ) : (
         <></>
       )}
@@ -154,7 +160,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div class="navbar-end hidden lg:flex">
-          <ul class="menu menu-horizontal p-0 font-bold  hover:bg-se">
+          <ul class="menu menu-horizontal p-0 font-bold text-xl  hover:bg-se">
             {menuItem}
           </ul>
         </div>
