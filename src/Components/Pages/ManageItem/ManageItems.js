@@ -13,18 +13,17 @@ const ManageItems = () => {
     <div>
       <div className="overflow-x-auto">
         <table className="table table-compact w-full">
-          <thead>
+          <thead className="text-center">
             <tr>
+              <th>Index</th>
               <th></th>
               <th>Name</th>
-              <th>Job</th>
-              <th>company</th>
-              <th>location</th>
-              <th>Last Login</th>
-              <th>Favorite Color</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Delete</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="text-center">
             {products.map((product, index) => (
               <ManageItem
                 key={product._id}
