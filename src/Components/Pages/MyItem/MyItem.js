@@ -21,12 +21,7 @@ const MyItem = ({ product, index, handleDelete }) => {
       <td>{totalPrice}</td>
       <td className=" w-44 ">
         <div className="">
-          <button
-            onClick={() => handleDelete(product._id)}
-            className="btn btn-sm btn-secondary"
-          >
-            Payment
-          </button>
+          <button className="btn btn-sm btn-secondary">Payment</button>
         </div>
       </td>
       <td className=" w-44 ">
