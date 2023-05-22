@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const BuyNow = () => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
   const [quantity, setQuantity] = useState('');
 
-  const totalPrice = quantity * 30;
+  const totalPrice = quantity * product?.price;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/product/${id}`)
+    fetch(`http://localhost:5000/buy/${id}`)
       .then(res => res.json())
       .then(data => setProduct(data));
   }, [id]);
 
-  console.log(product);
+  // console.log(product);
   const {
     register,
     formState: { errors },
@@ -23,21 +24,29 @@ const BuyNow = () => {
     reset,
   } = useForm();
   const onSubmit = data => {
-    const changeUrl = { ...data, quantity, totalPrice };
-    console.log(changeUrl);
-    // const url = `http://localhost:5000/books`;
-    // fetch(url, {
-    //   method: "POST",
-    //   headers: {
-    //     "content-type": "application/json",
-    //   },
-    //   body: JSON.stringify(changeUrl),
-    // })
-    //   .then((res) => res.json())
-    //   .then((result) => {
-    //     toast.success("Successfully Add This Products");
-    //     reset();
-    //   });
+    const changeUrl = {
+      ...data,
+      quantity,
+      totalPrice,
+      price: product.price,
+      name: product?.name,
+      img: product?.img,
+      productsCategory: product?.productsCategory,
+    };
+    // console.log(changeUrl);
+    const url = `http://localhost:5000/buyProduct`;
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(changeUrl),
+    })
+      .then(res => res.json())
+      .then(result => {
+        toast.success('Successfully Add This Products');
+        reset();
+      });
   };
   return (
     <div
@@ -65,17 +74,17 @@ const BuyNow = () => {
           <form className="" onSubmit={handleSubmit(onSubmit)}>
             {/* name */}
             <input
-              value={`Mango`}
+              value={`${product?.name}`}
               type="text"
-              className="input input-bordered bg-white w-full mb-4 font-bold   hover:shadow-xl shadow-inner"
+              className="input input-bordered bg-white text-xl w-full mb-4 font-bold   hover:shadow-xl shadow-inner"
             />
 
             {/* Price */}
 
             <input
-              value={`Price 30 `}
+              value={`Price : ${product?.price} `}
               type="text"
-              className="input input-bordered bg-white w-full  font-bold    hover:shadow-xl shadow-inner"
+              className="input input-bordered bg-white w-full  font-bold  text-xl   hover:shadow-xl shadow-inner"
             />
 
             {/* Quantity */}
