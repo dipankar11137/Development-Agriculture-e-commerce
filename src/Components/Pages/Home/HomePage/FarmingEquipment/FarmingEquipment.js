@@ -1,7 +1,13 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 const FarmingEquipment = ({ product }) => {
   const { name, img, price, description } = product;
+  const navigation = useNavigate();
+
+  const handleBuy = id => {
+    navigation(`/buyNow/${id}`);
+  };
   return (
     <div className="card w-11/12 bg-base-100 shadow-xl ">
       <figure>
@@ -12,7 +18,12 @@ const FarmingEquipment = ({ product }) => {
         <p>Price : ${price}</p>
         <p>{description}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+          <button
+            onClick={() => handleBuy(product._id)}
+            className="btn btn-primary"
+          >
+            Buy Now
+          </button>
         </div>
       </div>
     </div>
