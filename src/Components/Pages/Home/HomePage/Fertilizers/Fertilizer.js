@@ -1,8 +1,13 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 const Fertilizer = ({ product, index }) => {
   const { name, img, price, description } = product;
+  const navigation = useNavigate();
 
+  const handleBuy = id => {
+    navigation(`/buyNow/${id}`);
+  };
   return (
     <>
       {index % 2 === 0 ? (
@@ -27,7 +32,12 @@ const Fertilizer = ({ product, index }) => {
             <p>Price : ${price}</p>
             <p className="w-72 ">{description}</p>
             <div className="card-actions justify-start">
-              <button className="btn btn-primary">Buy Now</button>
+              <button
+                onClick={() => handleBuy(product._id)}
+                className="btn btn-primary"
+              >
+                Buy Now
+              </button>
             </div>
           </div>
         </div>
@@ -53,7 +63,12 @@ const Fertilizer = ({ product, index }) => {
             <p>Price : $ {price}</p>
             <p className="w-72 ">{description}</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+              <button
+                onClick={() => handleBuy(product._id)}
+                className="btn btn-primary"
+              >
+                Buy Now
+              </button>
             </div>
           </div>
         </div>

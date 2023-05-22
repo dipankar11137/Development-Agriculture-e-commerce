@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import '../../../../CSS/ImageStyle.css';
 
 const Seed = ({ product, index }) => {
-  const navigation = useNavigate();
   const { name, img, price, description } = product;
+  const navigation = useNavigate();
 
   const handleBuy = id => {
     navigation(`/buyNow/${id}`);
