@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import auth from '../../../firebase.init';
 
 const BuyNow = () => {
   const { id } = useParams();
+  const [user] = useAuthState(auth);
+  const email = user.email;
   const [product, setProduct] = useState({});
   const [quantity, setQuantity] = useState('');
+  const navigator = useNavigate();
 
   const totalPrice = quantity * product?.price;
 
@@ -16,7 +21,7 @@ const BuyNow = () => {
       .then(data => setProduct(data));
   }, [id]);
 
-  // console.log(product);
+  // console.log(email);
   const {
     register,
     formState: { errors },
@@ -32,6 +37,7 @@ const BuyNow = () => {
       name: product?.name,
       img: product?.img,
       productsCategory: product?.productsCategory,
+      email,
     };
     // console.log(changeUrl);
     const url = `http://localhost:5000/buyProduct`;
@@ -44,8 +50,9 @@ const BuyNow = () => {
     })
       .then(res => res.json())
       .then(result => {
-        toast.success('Successfully Add This Products');
+        toast.success('Buy');
         reset();
+        navigator('/');
       });
   };
   return (
