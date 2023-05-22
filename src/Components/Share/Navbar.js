@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
-import auth from "../../firebase.init";
-import { signOut } from "firebase/auth";
-import { MdAgriculture } from "react-icons/md";
-import "../CSS/Navbar.css";
+import { signOut } from 'firebase/auth';
+import React, { useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { MdAgriculture } from 'react-icons/md';
+import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
+import '../CSS/Navbar.css';
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
@@ -12,76 +12,92 @@ const Navbar = () => {
     signOut(auth);
   };
 
-  const [selectedButton, setSelectedButton] = useState("Button 1");
+  const [selectedButton, setSelectedButton] = useState('Button 1');
 
   const menuItem = (
     <>
       <li
-        onClick={() => setSelectedButton("Button 1")}
+        onClick={() => setSelectedButton('Button 1')}
         className={
-          selectedButton === "Button 1"
-            ? "bg-primary text-white rounded-lg"
-            : ""
+          selectedButton === 'Button 1'
+            ? 'bg-primary text-white rounded-lg'
+            : ''
         }
       >
-        <Link to="/" className="font-bold  text-xl ">
+        <Link to="/" className="font-bold   ">
           Home
         </Link>
       </li>
       <li
-        onClick={() => setSelectedButton("Button 2")}
+        onClick={() => setSelectedButton('Button 2')}
         className={
-          selectedButton === "Button 2"
-            ? "bg-primary text-white rounded-lg"
-            : ""
+          selectedButton === 'Button 2'
+            ? 'bg-primary text-white rounded-lg'
+            : ''
         }
       >
-        <Link to="/blog" className="font-bold  text-xl ">
+        <Link to="/blog" className="font-bold  ">
           Blog
         </Link>
       </li>
 
-      {user && (
+      {user?.email === 'abc@def.com' && (
         <>
           <li
-            onClick={() => setSelectedButton("Button 3")}
+            onClick={() => setSelectedButton('Button 3')}
             className={
-              selectedButton === "Button 3"
-                ? "bg-primary text-white rounded-lg"
-                : ""
+              selectedButton === 'Button 3'
+                ? 'bg-primary text-white rounded-lg'
+                : ''
             }
           >
-            <Link to="/addItem" className="font-bold  text-xl ">
+            <Link to="/addItem" className="font-bold   ">
               Add Items
             </Link>
           </li>
           <li
-            onClick={() => setSelectedButton("Button 4")}
+            onClick={() => setSelectedButton('Button 4')}
             className={
-              selectedButton === "Button 4"
-                ? "bg-primary text-white rounded-lg"
-                : ""
+              selectedButton === 'Button 4'
+                ? 'bg-primary text-white rounded-lg'
+                : ''
             }
           >
-            <Link to="/manageItem" className="font-bold  text-xl ">
+            <Link to="/manageItem" className="font-bold   ">
               Manage Item
             </Link>
           </li>
           <li
-            onClick={() => setSelectedButton("Button 5")}
+            onClick={() => setSelectedButton('Button 7')}
             className={
-              selectedButton === "Button 5"
-                ? "bg-primary text-white rounded-lg"
-                : ""
+              selectedButton === 'Button 7'
+                ? 'bg-primary text-white rounded-lg'
+                : ''
             }
           >
-            <Link to="/myItem" className="font-bold  text-xl ">
-              My Item
+            <Link to="/manageBook" className="font-bold   ">
+              Manage all Book
             </Link>
           </li>
         </>
       )}
 
+      {user ? (
+        <li
+          onClick={() => setSelectedButton('Button 5')}
+          className={
+            selectedButton === 'Button 5'
+              ? 'bg-primary text-white rounded-lg'
+              : ''
+          }
+        >
+          <Link to="/myItem" className="font-bold  ">
+            My Item
+          </Link>
+        </li>
+      ) : (
+        <></>
+      )}
       <li>
         {user ? (
           <p onClick={logout}>Sign Out</p>
@@ -96,8 +112,8 @@ const Navbar = () => {
       className="px-20"
       style={{
         background: `url("https://cdn.wallpapersafari.com/61/31/Mo8nwL.jpg")`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
       }}
     >
       <div class="navbar px-12 mx-auto text-white shadow-2xl rounded-lg">
@@ -126,19 +142,19 @@ const Navbar = () => {
               {menuItem}
             </ul>
           </div>
-          <Link to={"/"}>
+          <Link to={'/'}>
             <div
-              onClick={() => setSelectedButton("Button 1")}
+              onClick={() => setSelectedButton('Button 1')}
               className="btn btn-ghost text-secondary font-extrabold text-3xl uppercase"
             >
-              {" "}
-              <MdAgriculture className="mr-4 text-secondary" size={55} />{" "}
-              Development Agriculture{" "}
+              {' '}
+              <MdAgriculture className="mr-4 text-secondary" size={55} />{' '}
+              Development Agriculture{' '}
             </div>
           </Link>
         </div>
         <div class="navbar-end hidden lg:flex">
-          <ul class="menu menu-horizontal p-0 font-bold text-xl hover:bg-se">
+          <ul class="menu menu-horizontal p-0 font-bold  hover:bg-se">
             {menuItem}
           </ul>
         </div>

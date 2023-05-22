@@ -1,7 +1,17 @@
 import React from 'react';
 
 const ManageBookProduct = ({ product, index, handleDelete }) => {
-  const { name, img, price, productsCategory } = product;
+  const {
+    name,
+    img,
+    price,
+    productsCategory,
+    address,
+    phone,
+    date,
+    quantity,
+    totalPrice,
+  } = product;
   return (
     <tr>
       <th>{index}</th>
@@ -14,9 +24,14 @@ const ManageBookProduct = ({ product, index, handleDelete }) => {
       </td>
       <td>{name}</td>
       <td>{productsCategory}</td>
+      <td>{phone}</td>
+      <td>{address}</td>
+      <td>{date}</td>
+      <td>{quantity}</td>
       <td>{price}</td>
+      <td>{totalPrice}</td>
       <td className=" w-44 ">
-        <div className="mr-[100px]">
+        <div className="mr-[200px]">
           <button
             onClick={() => handleDelete(product._id)}
             className="btn btn-sm btn-primary"
