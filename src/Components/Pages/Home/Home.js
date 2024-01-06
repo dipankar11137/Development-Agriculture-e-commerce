@@ -1,12 +1,13 @@
 import React from "react";
+import Footer from "../../Share/Footer";
+import BuyAndSells from "./BuyAndSells/BuyAndsells";
+import Advertisement from "./HomePage/Advertisement/Advertisement";
 import Banner from "./HomePage/Banner";
-import Seeds from "./HomePage/Seeds/Seeds";
-import Fertilizers from "./HomePage/Fertilizers/Fertilizers";
-import Pesticides from "./HomePage/Pesticides/Pesticides";
 import Contact from "./HomePage/Contact/Contact";
 import FarmingEquipments from "./HomePage/FarmingEquipment/FarmingEquipments";
-import Advertisement from "./HomePage/Advertisement/Advertisement";
-import Footer from "../../Share/Footer";
+import Fertilizers from "./HomePage/Fertilizers/Fertilizers";
+import Pesticides from "./HomePage/Pesticides/Pesticides";
+import Seeds from "./HomePage/Seeds/Seeds";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Banner />
       <Seeds />
       <Advertisement />
+      <BuyAndSells/>
       <Fertilizers />
       <Pesticides />
       <FarmingEquipments />
