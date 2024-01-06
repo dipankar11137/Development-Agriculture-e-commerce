@@ -10,19 +10,15 @@ const BuyAndSell = ({ product, handleBuy }) => {
     <div
       // data-aos="zoom-in-up"
       // data-aos-offset="200"
-      // // data-aos-delay="50"
-      // // data-aos-duration="1000"
+      // data-aos-delay="50"
+      // data-aos-duration="1000"
       // data-aos-easing="ease-in-out"
       // data-aos-once="true"
       // data-aos-anchor-placement="top-center"
       className="container  bg-white shadow-2xl hover:shadow-inner rounded-lg hover:bg-green-900 hover:text-white hover:cursor-pointer"
     >
       <div>
-        <img
-          className="rounded-lg pic-style w-full h-64"
-          src={product?.image}
-          alt=""
-        />
+        <img className="rounded-lg  w-full h-64" src={product?.img} alt="" />
         <div className="p-3 mt-3  pb-10">
           <h2 className="text-2xl font-bold">{product?.name}</h2>
           <h2 className="text-xl font-semibold flex">
@@ -38,23 +34,13 @@ const BuyAndSell = ({ product, handleBuy }) => {
           </h1>
         </div>
       </div>
-      <div className="overlay rounded-lg">
-        {user?.email === 'abc@def.com' ? (
-          <button
-            disabled
-            onClick={() => handleBuy(product._id)}
-            className="btn btn-primary text-white font-bold"
-          >
-            Buy Now
-          </button>
-        ) : (
-          <button
-            onClick={() => handleBuy(product._id)}
-            className="btn btn-primary text-white font-bold"
-          >
-            Buy Now
-          </button>
-        )}
+      <div className="overlay rounded-lg pb-2 -ml-3">
+        <button
+          onClick={() => handleBuy(product._id)}
+          className="btn btn-primary text-white font-bold"
+        >
+          Buy Now
+        </button>
       </div>
     </div>
   );

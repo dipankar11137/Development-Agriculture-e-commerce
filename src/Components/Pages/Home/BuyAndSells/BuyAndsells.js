@@ -13,13 +13,13 @@ const BuyAndSells = () => {
   const [products, setProducts] = useState([]);
   const navigator = useNavigate();
   useEffect(() => {
-    fetch('http://localhost:5000/buyAndSell/Buying And Selling')
+    fetch('http://localhost:5000/product/Buying And Selling')
       .then(res => res.json())
       .then(data => setProducts(data));
   }, [products]);
 
   const handleBuy = id => {
-    navigator(`/buy/${id}`);
+    navigator(`/buyNow/${id}`);
   };
 
   return (

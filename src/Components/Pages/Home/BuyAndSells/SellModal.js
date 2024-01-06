@@ -10,7 +10,7 @@ const SellModal = () => {
   const userName = users?.displayName;
   const [weight, setWeight] = useState('');
 
-  const category = 'Buying And Selling';
+  const productsCategory = 'Buying And Selling';
 
   const {
     register,
@@ -24,14 +24,15 @@ const SellModal = () => {
   const submitProduct = (data, image) => {
     const updateProduct = {
       ...data,
-      image,
+      img: image,
       email,
-      category,
+      productsCategory,
       userName,
       weight,
     };
+    console.log(updateProduct);
 
-    fetch(`http://localhost:5000/buyAndSells`, {
+    fetch(`http://localhost:5000/products`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -40,7 +41,7 @@ const SellModal = () => {
     })
       .then(res => res.json())
       .then(data => {
-        toast.success('Successfully Add This Product');
+        toast.success('Successfully');
         reset();
       });
   };
